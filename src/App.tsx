@@ -1,45 +1,25 @@
-import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import loadable from "@loadable/component";
 
-const Home = lazy(() => import("./pages/home"));
-const Destination = lazy(() => import("./pages/destination"));
-const Crew = lazy(() => import("./pages/crew"));
-const Technology = lazy(() => import("./pages/technology"));
+const Home = loadable(() => import("./pages/home"));
+const Destination = loadable(() => import("./pages/destination"));
+const Crew = loadable(() => import("./pages/crew"));
+const Technology = loadable(() => import("./pages/technology"));
+
+const fallback = <div>Loading...</div>;
 
 function App() {
   return (
     <Routes>
-      <Route
-        path=""
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Home />
-          </Suspense>
-        }
-      />
+      <Route path="" element={<Home fallback={fallback} />} />
       <Route
         path="/destination/:id"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Destination />
-          </Suspense>
-        }
+        element={<Destination fallback={fallback} />}
       />
-      <Route
-        path="/crew/:id"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Crew />
-          </Suspense>
-        }
-      />
+      <Route path="/crew/:id" element={<Crew fallback={fallback} />} />
       <Route
         path="/technology/:id"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Technology />
-          </Suspense>
-        }
+        element={<Technology fallback={fallback} />}
       />
     </Routes>
   );
