@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import loadable from "@loadable/component";
 
-const Home = loadable(() => import("./pages/home"));
-const Destination = loadable(() => import("./pages/destination"));
-const Crew = loadable(() => import("./pages/crew"));
-const Technology = loadable(() => import("./pages/technology"));
+const Home = loadable(() => import("pages/home"));
+const Destination = loadable(() => import("pages/destination"));
+const Crew = loadable(() => import("pages/crew"));
+const Technology = loadable(() => import("pages/technology"));
 
 const fallback = <div>Loading...</div>;
 
