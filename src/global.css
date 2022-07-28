@@ -1,6 +1,6 @@
-/* --------------- */
-/* Reset           */
-/* --------------- */
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
 
 /* https://piccalil.li/blog/a-modern-css-reset/ */
 
@@ -61,4 +61,15 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ------------------- */
+/* Styles              */
+/* ------------------- */
+
+/* Background images */
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

@@ -1,3 +1,5 @@
+import "./style.module.css";
+
 function Destination() {
   return <div>Destination</div>;
 }
