@@ -1,4 +1,4 @@
-import "./style.module.css";
+import "./bg.module.css";
 
 function Destination() {
   return <div>Destination</div>;
