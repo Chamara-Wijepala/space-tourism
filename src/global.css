@@ -118,7 +118,7 @@ select {
 }
 
 .text-white {
-  color: rgb(var(--clr-white, white));
+  color: rgb(var(--clr-white));
 }
 .text-light {
   color: rgb(var(--clr-light));
@@ -187,8 +187,8 @@ select {
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
-  color: var(--clr-white);
-  background-color: var(--clr-dark);
+  color: rgb(var(--clr-white));
+  background-color: rgb(var(--clr-dark));
 }
 
 h1,
