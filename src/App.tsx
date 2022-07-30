@@ -10,18 +10,20 @@ const fallback = <div>Loading...</div>;
 
 function App() {
   return (
-    <Routes>
-      <Route path="" element={<Home fallback={fallback} />} />
-      <Route
-        path="/destination/:id"
-        element={<Destination fallback={fallback} />}
-      />
-      <Route path="/crew/:id" element={<Crew fallback={fallback} />} />
-      <Route
-        path="/technology/:id"
-        element={<Technology fallback={fallback} />}
-      />
-    </Routes>
+    <div className="container">
+      <Routes>
+        <Route path="" element={<Home fallback={fallback} />} />
+        <Route
+          path="/destination/:id"
+          element={<Destination fallback={fallback} />}
+        />
+        <Route path="/crew/:id" element={<Crew fallback={fallback} />} />
+        <Route
+          path="/technology/:id"
+          element={<Technology fallback={fallback} />}
+        />
+      </Routes>
+    </div>
   );
 }
 

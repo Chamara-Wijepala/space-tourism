@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
@@ -81,93 +84,13 @@ select {
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
-  --ff-serif: "Bellefair", serif;
-  --ff-sans-cond: "Barlow Condensed", sans-serif;
-  --ff-sans-normal: "Barlow", sans-serif;
-}
+  --ff-bellefair: "Bellefair", serif;
+  --ff-barlow-cond: "Barlow Condensed", sans-serif;
+  --ff-barlow: "Barlow", sans-serif;
 
-/* ------------------- */
-/* Utility classes     */
-/* ------------------- */
-
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
-}
-
-/* Colors */
-.bg-white {
-  background-color: rgb(var(--clr-white));
-}
-.bg-light {
-  background-color: rgb(var(--clr-light));
-}
-.bg-dark {
-  background-color: rgb(var(--clr-dark));
-}
-
-.text-white {
-  color: rgb(var(--clr-white));
-}
-.text-light {
-  color: rgb(var(--clr-light));
-}
-.text-dark {
-  color: rgb(var(--clr-dark));
-}
-
-/* Typography */
-.ff-serif {
-  font-family: var(--ff-serif);
-}
-.ff-sans-cond {
-  font-family: var(--ff-sans-cond);
-}
-.ff-sans-normal {
-  font-family: var(--ff-sans-normal);
-}
-
-.letter-spacing-1 {
-  letter-spacing: 4.75px;
-}
-.letter-spacing-2 {
-  letter-spacing: 2.7px;
-}
-.letter-spacing-3 {
-  letter-spacing: 2.35px;
-}
-
-.fs-900 {
-  font-size: var(--fs-900);
-}
-.fs-800 {
-  font-size: var(--fs-800);
-}
-.fs-700 {
-  font-size: var(--fs-700);
-}
-.fs-600 {
-  font-size: var(--fs-600);
-}
-.fs-500 {
-  font-size: var(--fs-500);
-}
-.fs-400 {
-  font-size: var(--fs-400);
-}
-.fs-300 {
-  font-size: var(--fs-300);
-}
-.fs-200 {
-  font-size: var(--fs-200);
-}
-
-.fs-900,
-.fs-800,
-.fs-700,
-.fs-600 {
-  line-height: 1.1;
+  --spacing-1: 4.75px;
+  --spacing-2: 2.7px;
+  --spacing-3: 2.35px;
 }
 
 /* ------------------- */
@@ -175,7 +98,7 @@ select {
 /* ------------------- */
 
 body {
-  font-family: var(--ff-sans-normal);
+  font-family: var(--ff-barlow);
   font-size: var(--fs-400);
   color: rgb(var(--clr-white));
   background-color: rgb(var(--clr-dark));
@@ -192,3 +115,12 @@ h5,
 h6 {
   font-weight: 400;
 }
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+`;
+
+export default GlobalStyle;
