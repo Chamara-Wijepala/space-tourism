@@ -93,7 +93,7 @@ select {
   --spacing-3: 2.35px;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 376px) {
   :root {
     --fs-800: 5rem;
     --fs-700: 2.5rem;
@@ -102,7 +102,7 @@ select {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 769px) {
   :root {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
@@ -146,7 +146,7 @@ h6 {
   display: grid;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 769px) {
   .grid-container {
     column-gap: 2rem;
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
