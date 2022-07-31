@@ -4,7 +4,7 @@ import Hero from "./styles/home.styled";
 
 function Home() {
   return (
-    <>
+    <div className="grid-container">
       <Hero>
         <h1>
           SO, YOU WANT TO TRAVEL TO <br />
@@ -22,7 +22,7 @@ function Home() {
           EXPLORE
         </LargeLink>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -123,8 +123,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  display: grid;
-  grid-template-rows: min-content 1fr;
 }
 
 h1,
@@ -134,6 +132,11 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .container {
