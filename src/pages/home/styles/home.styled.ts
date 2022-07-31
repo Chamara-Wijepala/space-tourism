@@ -1,6 +1,21 @@
 import styled from "styled-components";
 
-const Hero = styled.div`
+export const Home = styled.div`
+  @media (min-width: 768px) {
+    padding-bottom: max(8rem, 20vh);
+    align-items: end;
+
+    > *:first-child {
+      justify-self: start;
+    }
+
+    > *:last-child {
+      justify-self: end;
+    }
+  }
+`;
+
+export const Hero = styled.div`
   color: rgb(var(--clr-light));
 
   h1 {
@@ -15,5 +30,3 @@ const Hero = styled.div`
     color: rgb(var(--clr-white));
   }
 `;
-
-export default Hero;

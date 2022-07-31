@@ -1,11 +1,11 @@
 import "./styles/bg.module.css";
 import LargeLink from "styles/LargeLink.styled";
-import Hero from "./styles/home.styled";
+import * as S from "./styles/home.styled";
 
 function Home() {
   return (
-    <div className="grid-container">
-      <Hero>
+    <S.Home className="grid-container">
+      <S.Hero>
         <h1>
           SO, YOU WANT TO TRAVEL TO <br />
           <span>SPACE</span>
@@ -16,13 +16,13 @@ function Home() {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-      </Hero>
+      </S.Hero>
       <div>
         <LargeLink to="/destination/:id" replace>
           EXPLORE
         </LargeLink>
       </div>
-    </div>
+    </S.Home>
   );
 }
 

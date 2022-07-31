@@ -135,6 +135,7 @@ h6 {
 }
 
 #root {
+  min-height: inherit;
   display: grid;
   grid-template-rows: min-content 1fr;
 }
@@ -147,12 +148,20 @@ h6 {
 
 .grid-container {
   display: grid;
+  place-items: center;
+  text-align: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
 }
 
 @media (min-width: 769px) {
   .grid-container {
     column-gap: 2rem;
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    text-align: left;
   }
   
   .grid-container > *:first-child {
