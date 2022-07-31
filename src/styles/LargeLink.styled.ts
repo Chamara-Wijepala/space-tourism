@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const LargeNavlink = styled(NavLink)`
+const Largelink = styled(Link)`
   text-decoration: none;
   color: rgb(var(--clr-dark));
   background-color: rgb(var(--clr-white));
@@ -14,4 +14,4 @@ const LargeNavlink = styled(NavLink)`
   place-items: center;
 `;
 
-export default LargeNavlink;
+export default Largelink;

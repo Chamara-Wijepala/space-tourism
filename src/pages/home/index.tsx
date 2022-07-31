@@ -1,5 +1,5 @@
 import "./styles/bg.module.css";
-import LargeNavlink from "styles/LargeNavLink.styled";
+import LargeLink from "styles/LargeLink.styled";
 import Hero from "./styles/home.styled";
 
 function Home() {
@@ -18,9 +18,9 @@ function Home() {
         </p>
       </Hero>
       <div>
-        <LargeNavlink to="/destination/:id" replace>
+        <LargeLink to="/destination/:id" replace>
           EXPLORE
-        </LargeNavlink>
+        </LargeLink>
       </div>
     </>
   );
