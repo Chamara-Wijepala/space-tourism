@@ -17,9 +17,11 @@ function Home() {
           experience!
         </p>
       </Hero>
-      <LargeNavlink to="/destination/:id" replace>
-        EXPLORE
-      </LargeNavlink>
+      <div>
+        <LargeNavlink to="/destination/:id" replace>
+          EXPLORE
+        </LargeNavlink>
+      </div>
     </>
   );
 }
