@@ -10,7 +10,7 @@ const fallback = <div>Loading...</div>;
 
 function App() {
   return (
-    <div className="container">
+    <div className="grid-container">
       <Routes>
         <Route path="" element={<Home fallback={fallback} />} />
         <Route

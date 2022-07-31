@@ -123,6 +123,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 h1,
@@ -138,6 +140,25 @@ h6 {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
+}
+
+.grid-container {
+  display: grid;
+}
+
+@media (min-width: 45rem) {
+  .grid-container {
+    column-gap: 2rem;
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  }
+  
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
 }
 `;
 
