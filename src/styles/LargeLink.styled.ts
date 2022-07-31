@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Largelink = styled(Link)`
+  outline: none;
   text-decoration: none;
   color: rgb(var(--clr-dark));
   background-color: rgb(var(--clr-white));
@@ -12,6 +13,12 @@ const Largelink = styled(Link)`
   border-radius: 50%;
   display: inline-grid;
   place-items: center;
+  transition: 0.3s;
+
+  :hover,
+  :focus {
+    box-shadow: 0 0 0 var(--fs-700) rgba(var(--clr-white) / 0.3);
+  }
 `;
 
 export default Largelink;
