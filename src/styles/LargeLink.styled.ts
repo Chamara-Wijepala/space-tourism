@@ -17,7 +17,7 @@ const Largelink = styled(Link)`
 
   :hover,
   :focus {
-    box-shadow: 0 0 0 var(--fs-700) rgba(var(--clr-white) / 0.3);
+    box-shadow: 0 0 0 var(--fs-700) rgba(var(--clr-white) / 0.136);
   }
 `;
 
