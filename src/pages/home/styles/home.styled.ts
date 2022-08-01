@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Home = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     padding-bottom: max(8rem, 20vh);
     align-items: end;
 
