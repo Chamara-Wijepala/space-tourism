@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import loadable from "@loadable/component";
 
+import Header from "components/Header";
+
 const Home = loadable(() => import("pages/home"));
 const Destination = loadable(() => import("pages/destination"));
 const Crew = loadable(() => import("pages/crew"));
@@ -10,7 +12,8 @@ const fallback = <div>Loading...</div>;
 
 function App() {
   return (
-    <div>
+    <>
+      <Header />
       <Routes>
         <Route path="" element={<Home fallback={fallback} />} />
         <Route
@@ -23,7 +26,7 @@ function App() {
           element={<Technology fallback={fallback} />}
         />
       </Routes>
-    </div>
+    </>
   );
 }
 
