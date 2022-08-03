@@ -172,6 +172,19 @@ h6 {
     grid-column: 3;
   }
 }
+
+.underline-indicators > * {
+  border-bottom: 3px solid rgb(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:hover {
+  border-bottom: 3px solid rgb(var(--clr-white) / 0.5);
+}
+
+.underline-indicators > .active {
+  border-bottom: 3px solid rgb(var(--clr-white) / 1);
+}
 `;
 
 export default GlobalStyle;
