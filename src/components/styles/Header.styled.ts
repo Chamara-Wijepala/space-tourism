@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-import hamburger from "assets/shared/icon-hamburger.svg";
+import hamburgerIcon from "assets/shared/icon-hamburger.svg";
+import closeIcon from "assets/shared/icon-close.svg";
 
-interface INavContainerProps {
+interface INavToggleStateProps {
   navToggleState: boolean;
 }
 
@@ -25,7 +26,7 @@ export const Header = styled.header`
   }
 `;
 
-export const NavContainer = styled.div<INavContainerProps>`
+export const NavContainer = styled.div<INavToggleStateProps>`
   /* Frosted glass effect */
   background-color: rgba(var(--clr-white) / 0.04);
   backdrop-filter: blur(1.5rem);
@@ -65,8 +66,13 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavToggle = styled.button`
+export const NavToggle = styled.button<INavToggleStateProps>`
   display: none;
+
+  :focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+  }
 
   @media (max-width: 767px) {
     display: block;
@@ -76,8 +82,13 @@ export const NavToggle = styled.button`
     top: 2rem;
     background: none;
     border: none;
-    background-image: url(${hamburger});
+    /* This is a workaround as directly rendering image in url() method does not work with ts-styled-plugin */
+    ${({ navToggleState }) =>
+      navToggleState
+        ? `background-image: url(${closeIcon});`
+        : `background-image: url(${hamburgerIcon});`}
     background-repeat: no-repeat;
+    background-position: center;
     width: 1.5rem;
     aspect-ratio: 1;
     cursor: pointer;

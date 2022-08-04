@@ -15,7 +15,11 @@ function Header() {
     <S.Header>
       <img src={logo} alt="Logo" />
 
-      <S.NavToggle aria-controls="primary-navigation" onClick={handleNavToggle}>
+      <S.NavToggle
+        aria-controls="primary-navigation"
+        navToggleState={navToggleState}
+        onClick={handleNavToggle}
+      >
         <span className="sr-only" aria-expanded={navToggleState}>
           Menu
         </span>
