@@ -12,7 +12,7 @@ export const Header = styled.header`
 
   display: grid;
   grid-template-columns:
-    minmax(1.5rem, 1fr) minmax(0, 32rem) 8rem minmax(0, 40rem)
+    minmax(1.5rem, 1fr) minmax(3rem, 32rem) 6rem minmax(20rem, 40rem)
     1fr;
 
   *:first-child {
@@ -25,6 +25,12 @@ export const Header = styled.header`
 
   img {
     padding-block: 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns:
+      minmax(1.5rem, 1fr) minmax(3rem, 32rem) 6rem minmax(0, 40rem)
+      1fr;
   }
 `;
 
