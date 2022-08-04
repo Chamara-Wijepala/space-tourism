@@ -45,12 +45,16 @@ export const NavContainer = styled.div<INavToggleStateProps>`
 export const Nav = styled.nav`
   display: flex;
   gap: 2rem;
+  min-height: 100%;
 
   a {
     outline: none;
     text-decoration: none;
     letter-spacing: var(--spacing-2);
     color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
   }
 
   a span {
