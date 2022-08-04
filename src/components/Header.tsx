@@ -31,16 +31,16 @@ function Header() {
       <S.NavContainer navToggleState={navToggleState}>
         <S.Nav className="underline-indicators" id="primary-navigation">
           <NavLink to="">
-            <span>00</span> HOME
+            <span aria-hidden="true">00</span> HOME
           </NavLink>
           <NavLink to="/destination/:id">
-            <span>01</span> DESTINATION
+            <span aria-hidden="true">01</span> DESTINATION
           </NavLink>
           <NavLink to="/crew/:id">
-            <span>02</span> CREW
+            <span aria-hidden="true">02</span> CREW
           </NavLink>
           <NavLink to="/technology/:id">
-            <span>03</span> TECHNOLOGY
+            <span aria-hidden="true">03</span> TECHNOLOGY
           </NavLink>
         </S.Nav>
       </S.NavContainer>
