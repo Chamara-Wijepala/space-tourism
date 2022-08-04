@@ -8,20 +8,22 @@ function Header() {
     <S.Header>
       <img src={logo} alt="Logo" />
 
-      <S.Nav className="underline-indicators" id="primary-navigation">
-        <NavLink to="">
-          <span>00</span> HOME
-        </NavLink>
-        <NavLink to="/destination/:id">
-          <span>01</span> DESTINATION
-        </NavLink>
-        <NavLink to="/crew/:id">
-          <span>02</span> CREW
-        </NavLink>
-        <NavLink to="/technology/:id">
-          <span>03</span> TECHNOLOGY
-        </NavLink>
-      </S.Nav>
+      <S.NavContainer>
+        <S.Nav className="underline-indicators" id="primary-navigation">
+          <NavLink to="">
+            <span>00</span> HOME
+          </NavLink>
+          <NavLink to="/destination/:id">
+            <span>01</span> DESTINATION
+          </NavLink>
+          <NavLink to="/crew/:id">
+            <span>02</span> CREW
+          </NavLink>
+          <NavLink to="/technology/:id">
+            <span>03</span> TECHNOLOGY
+          </NavLink>
+        </S.Nav>
+      </S.NavContainer>
     </S.Header>
   );
 }
