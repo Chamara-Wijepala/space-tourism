@@ -25,9 +25,19 @@ export const NavContainer = styled.div`
   /* Frosted glass effect */
   background-color: rgba(var(--clr-white) / 0.04);
   backdrop-filter: blur(1.5rem);
+
+  @media (max-width: 767px) {
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(20rem, 15vh) 2rem;
+    transform: translateX(100%);
+  }
 `;
 
 export const Nav = styled.nav`
+  display: flex;
+  gap: 2rem;
+
   a {
     outline: none;
     text-decoration: none;
@@ -37,6 +47,14 @@ export const Nav = styled.nav`
 
   a span {
     font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    a.active {
+      border: 0;
+    }
   }
 `;
 
