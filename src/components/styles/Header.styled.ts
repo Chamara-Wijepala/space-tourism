@@ -46,7 +46,7 @@ export const NavContainer = styled.div<INavToggleStateProps>`
 
 export const Nav = styled.nav`
   display: flex;
-  gap: 2rem;
+  gap: clamp(1.5rem, 5vw, 3.5rem);
   min-height: 100%;
 
   a {
@@ -68,6 +68,18 @@ export const Nav = styled.nav`
 
     a.active {
       border: 0;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+    padding-inline: 3rem;
+
+    a {
+      letter-spacing: var(--spacing-3);
+    }
+
+    a span {
+      display: none;
     }
   }
 `;
