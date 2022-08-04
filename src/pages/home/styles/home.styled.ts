@@ -4,14 +4,6 @@ export const Home = styled.div`
   @media (min-width: 769px) {
     padding-bottom: max(8rem, 20vh);
     align-items: end;
-
-    > *:first-child {
-      justify-self: start;
-    }
-
-    > *:last-child {
-      justify-self: end;
-    }
   }
 `;
 
