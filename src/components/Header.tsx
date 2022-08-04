@@ -13,7 +13,10 @@ function Header() {
 
   return (
     <S.Header>
-      <img src={logo} alt="Logo" />
+      <div className="logo-container">
+        <img src={logo} alt="Logo" />
+        <div className="line" />
+      </div>
 
       <S.NavToggle
         aria-controls="primary-navigation"

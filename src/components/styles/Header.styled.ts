@@ -23,6 +23,13 @@ export const Header = styled.header`
     grid-column: 3 / -1;
   }
 
+  .logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 2.5rem;
+  }
+
   img {
     padding-block: 1.5rem;
   }
@@ -31,6 +38,20 @@ export const Header = styled.header`
     grid-template-columns:
       minmax(1.5rem, 1fr) minmax(3rem, 32rem) 6rem minmax(0, 40rem)
       1fr;
+  }
+
+  @media (min-width: 1440px) {
+    margin-block: 2.5rem;
+
+    .line {
+      content: "";
+      position: relative;
+      z-index: 1000;
+      height: 1px;
+      background: rgba(var(--clr-white) / 0.25);
+      width: 100%;
+      left: 4rem;
+    }
   }
 `;
 
@@ -77,8 +98,12 @@ export const Nav = styled.nav`
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1440px) {
-    padding-inline: 3rem;
+  @media (min-width: 767px) {
+    padding-inline: clamp(3rem, 8vw, 7rem);
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    /* padding-inline: 3rem; */
 
     a {
       letter-spacing: var(--spacing-3);
