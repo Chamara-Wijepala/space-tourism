@@ -9,6 +9,12 @@ function Header() {
       <img src={logo} alt="Logo" />
 
       <S.NavContainer>
+        <S.NavToggle aria-controls="primary-navigation">
+          <span className="sr-only" aria-expanded="false">
+            Menu
+          </span>
+        </S.NavToggle>
+
         <S.Nav className="underline-indicators" id="primary-navigation">
           <NavLink to="">
             <span>00</span> HOME

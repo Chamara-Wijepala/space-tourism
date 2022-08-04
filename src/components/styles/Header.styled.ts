@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import hamburger from "assets/shared/icon-hamburger.svg";
+
 export const Header = styled.header`
   min-height: 6rem;
 
@@ -35,5 +37,24 @@ export const Nav = styled.nav`
 
   a span {
     font-weight: bold;
+  }
+`;
+
+export const NavToggle = styled.button`
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    right: 1rem;
+    top: 2rem;
+    background: none;
+    border: none;
+    background-image: url(${hamburger});
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    cursor: pointer;
   }
 `;
