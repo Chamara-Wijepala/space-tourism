@@ -11,7 +11,9 @@ export const Header = styled.header`
   min-height: 6rem;
 
   display: grid;
-  grid-template-columns: 1fr minmax(0, 32rem) 8rem minmax(0, 40rem) 1fr;
+  grid-template-columns:
+    minmax(1.5rem, 1fr) minmax(0, 32rem) 8rem minmax(0, 40rem)
+    1fr;
 
   *:first-child {
     grid-column: 2;
