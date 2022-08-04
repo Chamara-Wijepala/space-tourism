@@ -178,7 +178,7 @@ h6 {
 }
 
 .underline-indicators > *:hover,
-.underline-indicators > *:hover {
+.underline-indicators > *:focus {
   border-bottom: 3px solid rgb(var(--clr-white) / 0.5);
 }
 
