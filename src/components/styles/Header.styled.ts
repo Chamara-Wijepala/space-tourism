@@ -9,6 +9,7 @@ interface INavToggleStateProps {
 
 export const Header = styled.header`
   min-height: 6rem;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-columns:
