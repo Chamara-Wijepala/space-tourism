@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 import hamburger from "assets/shared/icon-hamburger.svg";
 
+interface INavContainerProps {
+  navToggleState: boolean;
+}
+
 export const Header = styled.header`
   min-height: 6rem;
 
@@ -21,7 +25,7 @@ export const Header = styled.header`
   }
 `;
 
-export const NavContainer = styled.div`
+export const NavContainer = styled.div<INavContainerProps>`
   /* Frosted glass effect */
   background-color: rgba(var(--clr-white) / 0.04);
   backdrop-filter: blur(1.5rem);
@@ -30,7 +34,10 @@ export const NavContainer = styled.div`
     position: fixed;
     inset: 0 0 0 30%;
     padding: min(20rem, 15vh) 2rem;
-    transform: translateX(100%);
+    transform: translateX(
+      ${({ navToggleState }) => (navToggleState ? "0%" : "100%")}
+    );
+    transition: transform 300ms ease-in-out;
   }
 `;
 

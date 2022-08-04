@@ -1,20 +1,27 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "assets/shared/logo.svg";
 import * as S from "./styles/Header.styled";
 
 function Header() {
+  const [navToggleState, setNavToggleState] = useState(false);
+
+  const handleNavToggle = () => {
+    setNavToggleState(!navToggleState);
+  };
+
   return (
     <S.Header>
       <img src={logo} alt="Logo" />
 
-      <S.NavContainer>
-        <S.NavToggle aria-controls="primary-navigation">
-          <span className="sr-only" aria-expanded="false">
-            Menu
-          </span>
-        </S.NavToggle>
+      <S.NavToggle aria-controls="primary-navigation" onClick={handleNavToggle}>
+        <span className="sr-only" aria-expanded={navToggleState}>
+          Menu
+        </span>
+      </S.NavToggle>
 
+      <S.NavContainer navToggleState={navToggleState}>
         <S.Nav className="underline-indicators" id="primary-navigation">
           <NavLink to="">
             <span>00</span> HOME
