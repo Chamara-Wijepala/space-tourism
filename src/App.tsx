@@ -15,10 +15,10 @@ function App() {
   const location = path.split("/")[1];
 
   return (
-    <div className={`content ${location}`}>
+    <div className={`content ${location === "" ? `home` : location}`}>
       <Header />
       <Routes>
-        <Route path="/home" element={<Home fallback={fallback} />} />
+        <Route path="/" element={<Home fallback={fallback} />} />
         <Route
           path="/destination/:id"
           element={<Destination fallback={fallback} />}
