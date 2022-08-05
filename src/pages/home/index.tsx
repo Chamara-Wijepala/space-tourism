@@ -1,9 +1,9 @@
 import LargeLink from "styles/LargeLink.styled";
-import * as S from "./styles/home.styled";
+import * as S from "./home.styled";
 
 function Home() {
   return (
-    <S.Home className="grid-container">
+    <S.Home>
       <S.Hero>
         <h1>
           SO, YOU WANT TO TRAVEL TO <br />

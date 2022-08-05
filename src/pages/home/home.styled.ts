@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Home = styled.main`
+import GridContainer from "styles/GridContainer";
+
+export const Home = styled(GridContainer)`
   @media (min-width: 769px) {
     padding-bottom: max(8rem, 20vh);
     align-items: end;
