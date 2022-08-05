@@ -1,4 +1,3 @@
-import "./styles/bg.module.css";
 import LargeLink from "styles/LargeLink.styled";
 import * as S from "./styles/home.styled";
 

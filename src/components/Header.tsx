@@ -30,7 +30,7 @@ function Header() {
 
       <S.NavContainer navToggleState={navToggleState}>
         <S.Nav className="underline-indicators" id="primary-navigation">
-          <NavLink to="">
+          <NavLink to="/home">
             <span aria-hidden="true">00</span> HOME
           </NavLink>
           <NavLink to="/destination/:id">

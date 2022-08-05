@@ -1,5 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 
+import homeDesktop from "assets/home/background-home-desktop.jpg";
+import homeTablet from "assets/home/background-home-tablet.jpg";
+import homeMobile from "assets/home/background-home-mobile.jpg";
+import destinationDesktop from "assets/destination/background-destination-desktop.jpg";
+import destinationTablet from "assets/destination/background-destination-tablet.jpg";
+import destinationMobile from "assets/destination/background-destination-mobile.jpg";
+import crewDesktop from "assets/crew/background-crew-desktop.jpg";
+import crewTablet from "assets/crew/background-crew-tablet.jpg";
+import crewMobile from "assets/crew/background-crew-mobile.jpg";
+import technologyDesktop from "assets/technology/background-technology-desktop.jpg";
+import technologyTablet from "assets/technology/background-technology-tablet.jpg";
+import technologyMobile from "assets/technology/background-technology-mobile.jpg";
+
 const GlobalStyle = createGlobalStyle`
 /* ------------------- */
 /* Reset               */
@@ -115,14 +128,65 @@ select {
 /* Styles              */
 /* ------------------- */
 
+.content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content.home {
+  background-image: url(${homeDesktop});
+
+  @media (max-width: 768px) {
+    background-image: url(${homeTablet});
+  }
+
+  @media (max-width: 375px) {
+    background-image: url(${homeMobile});
+  }
+}
+
+.content.destination {
+  background-image: url(${destinationDesktop});
+
+  @media (max-width: 768px) {
+    background-image: url(${destinationTablet});
+  }
+
+  @media (max-width: 375px) {
+    background-image: url(${destinationMobile});
+  }
+}
+
+.content.crew {
+  background-image: url(${crewDesktop});
+
+  @media (max-width: 768px) {
+    background-image: url(${crewTablet});
+  }
+
+  @media (max-width: 375px) {
+    background-image: url(${crewMobile});
+  }
+}
+
+.content.technology {
+  background-image: url(${technologyDesktop});
+
+  @media (max-width: 768px) {
+    background-image: url(${technologyTablet});
+  }
+
+  @media (max-width: 375px) {
+    background-image: url(${technologyMobile});
+  }
+}
+
 body {
   font-family: var(--ff-barlow);
   font-size: var(--fs-400);
   color: rgb(var(--clr-white));
   background-color: rgb(var(--clr-dark));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
 h1,
@@ -134,7 +198,8 @@ h6 {
   font-weight: 400;
 }
 
-#root {
+#root,
+.content {
   min-height: inherit;
   display: grid;
   grid-template-rows: min-content 1fr;

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import loadable from "@loadable/component";
 
 import Header from "components/Header";
@@ -11,11 +11,14 @@ const Technology = loadable(() => import("pages/technology"));
 const fallback = <div>Loading...</div>;
 
 function App() {
+  const path = useLocation().pathname;
+  const location = path.split("/")[1];
+
   return (
-    <>
+    <div className={`content ${location}`}>
       <Header />
       <Routes>
-        <Route path="" element={<Home fallback={fallback} />} />
+        <Route path="/home" element={<Home fallback={fallback} />} />
         <Route
           path="/destination/:id"
           element={<Destination fallback={fallback} />}
@@ -26,7 +29,7 @@ function App() {
           element={<Technology fallback={fallback} />}
         />
       </Routes>
-    </>
+    </div>
   );
 }
 
