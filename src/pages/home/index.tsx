@@ -1,5 +1,5 @@
 import LargeLink from "styles/LargeLink.styled";
-import * as S from "./home.styled";
+import * as S from "./Home.styled";
 
 function Home() {
   return (
