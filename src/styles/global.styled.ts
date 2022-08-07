@@ -92,7 +92,7 @@ select {
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
-  --fs-500: 1.75rem;
+  --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -111,6 +111,7 @@ select {
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -120,6 +121,7 @@ select {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
   }
 }
@@ -211,7 +213,22 @@ h6 {
   max-width: 80rem;
 }
 
+.numbered-title {
+    font-family: var(--ff-barlow-cond);
+    font-size: var(--fs-500);
+    letter-spacing: var(--spacing-1);
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: rgba( var(--clr-white) / .25);
+}
+
 .underline-indicators > * {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
   border-bottom: 3px solid rgb(var(--clr-white) / 0);
 }
 

@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { lazy } from "@loadable/component";
 
+import data from "data/data.json";
+
 import Header from "components/Header";
 
 const Home = lazy(() => import("pages/home"));
@@ -21,7 +23,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/destination/:id" element={<Destination />} />
+          <Route
+            path="/destination/:id"
+            element={<Destination data={data.destinations} />}
+          />
           <Route path="/crew/:id" element={<Crew />} />
           <Route path="/technology/:id" element={<Technology />} />
         </Routes>
